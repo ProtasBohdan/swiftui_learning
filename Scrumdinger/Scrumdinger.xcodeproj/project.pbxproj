@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B84E163627A3ECD6008E84AC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E163527A3ECD6008E84AC /* DetailView.swift */; };
+		B85819DC27B2A11300CFBB46 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85819DB27B2A11300CFBB46 /* DetailEditView.swift */; };
 		B870505F27961024009A52B9 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870505E27961024009A52B9 /* TrailingIconLabelStyle.swift */; };
 		B87050612796171C009A52B9 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87050602796171C009A52B9 /* ScrumsView.swift */; };
 		B87FA30C2796034700C125AC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FA30B2796034700C125AC /* Theme.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		B84E163527A3ECD6008E84AC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B85819DB27B2A11300CFBB46 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		B870505E27961024009A52B9 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		B87050602796171C009A52B9 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		B87FA30B2796034700C125AC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 				B87FA30F279607C200C125AC /* CardView.swift */,
 				B87050602796171C009A52B9 /* ScrumsView.swift */,
 				B84E163527A3ECD6008E84AC /* DetailView.swift */,
+				B85819DB27B2A11300CFBB46 /* DetailEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				B87FA30E279606A200C125AC /* DailyScrum.swift in Sources */,
 				B84E163627A3ECD6008E84AC /* DetailView.swift in Sources */,
+				B85819DC27B2A11300CFBB46 /* DetailEditView.swift in Sources */,
 				B870505F27961024009A52B9 /* TrailingIconLabelStyle.swift in Sources */,
 				B87FA30C2796034700C125AC /* Theme.swift in Sources */,
 				B87050612796171C009A52B9 /* ScrumsView.swift in Sources */,
