@@ -8,27 +8,24 @@
 import SwiftUI
 
 struct DetailView: View {
-    let scrum: DailyScrum
+    @Binding var scrum: DailyScrum
     
+    @State private var data = DailyScrum.Data()
     @State private var isPresentingEditView = false
     
     var body: some View {
         List {
-            Section(header: Text("Meeting info")) {
+            Section(header: Text("Meeting Info")) {
                 NavigationLink(destination: MeetingView()) {
-                    Label("Start meeting", systemImage: "timer")
+                    Label("Start Meeting", systemImage: "timer")
                         .font(.headline)
                         .foregroundColor(.accentColor)
                 }
-                
                 HStack {
                     Label("Length", systemImage: "clock")
                     Spacer()
                     Text("\(scrum.lengthInMinutes) minutes")
                 }
-                /// VoiceOver then reads the two elements as one statement, for example, “Length, 10 minutes.”
-                ///  Without the modifier, VoiceOver users have to swipe again between each element.
-                .accessibilityElement(children: .combine)
                 HStack {
                     Label("Theme", systemImage: "paintpalette")
                     Spacer()
@@ -38,7 +35,6 @@ struct DetailView: View {
                         .background(scrum.theme.mainColor)
                         .cornerRadius(4)
                 }
-                .accessibilityElement(children: .combine)
             }
             Section(header: Text("Attendees")) {
                 ForEach(scrum.attendees) { attendee in
@@ -46,9 +42,16 @@ struct DetailView: View {
                 }
             }
         }
+        .navigationTitle(scrum.title)
+        .toolbar {
+            Button("Edit") {
+                isPresentingEditView = true
+                data = scrum.data
+            }
+        }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
-                DetailEditView()
+                DetailEditView(data: $data)
                     .navigationTitle(scrum.title)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
@@ -59,26 +62,19 @@ struct DetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
                                 isPresentingEditView = false
+                                scrum.update(from: data)
                             }
                         }
                     }
             }
         }
-        .navigationTitle(scrum.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            Button("Edit") {
-                isPresentingEditView = true
-            }
-        }
-        
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(scrum: DailyScrum.sampleData[0])
-        }.previewLayout(.fixed(width: 400, height: 600))
+            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
+        }
     }
 }
