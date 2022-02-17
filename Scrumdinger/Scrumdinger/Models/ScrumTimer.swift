@@ -89,7 +89,11 @@ class ScrumTimer: ObservableObject {
         timer = Timer.scheduledTimer(withTimeInterval: frequency, repeats: true) { [weak self] timer in
             if let self = self, let startDate = self.startDate {
                 let secondsElapsed = Date().timeIntervalSince1970 - startDate.timeIntervalSince1970
-                self.update(secondsElapsed: Int(secondsElapsed))
+                if self.secondsRemaining == 0 {
+                    self.stopScrum()
+                } else {
+                    self.update(secondsElapsed: Int(secondsElapsed))
+                }
             }
         }
     }
