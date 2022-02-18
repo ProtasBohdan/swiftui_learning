@@ -26,6 +26,14 @@ struct DailyScrum: Identifiable {
         self.theme = theme
     }
     
+    init(id: UUID = UUID(), data: DailyScrum.Data) {
+        self.id = id
+        self.title = data.title
+        self.attendees = data.attendees
+        self.lengthInMinutes = Int(data.lengthInMinuted)
+        self.theme = data.theme
+    }
+    
     mutating func update(from data: Data) {
         title = data.title
         attendees = data.attendees
