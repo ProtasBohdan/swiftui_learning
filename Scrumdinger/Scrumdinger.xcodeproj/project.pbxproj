@@ -96,8 +96,8 @@
 		B8BFE01327BEC7FC00B82FC8 /* MeetingView */ = {
 			isa = PBXGroup;
 			children = (
-				B8BFE01127BEC7E600B82FC8 /* MeetingHeaderView.swift */,
 				B8F55E3B2791906200ACE542 /* MeetingView.swift */,
+				B8BFE01127BEC7E600B82FC8 /* MeetingHeaderView.swift */,
 				B8BFE01E27BEDE1E00B82FC8 /* MeetingFooterView.swift */,
 			);
 			path = MeetingView;
