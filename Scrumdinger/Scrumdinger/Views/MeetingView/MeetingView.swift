@@ -24,7 +24,7 @@ struct MeetingView: View {
                     theme: scrum.theme
                 )
                 
-                Circle().strokeBorder(lineWidth: 24)
+                MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
                 
                 MeetingFooterView(
                     speakers: scrumTimer.speakers,
