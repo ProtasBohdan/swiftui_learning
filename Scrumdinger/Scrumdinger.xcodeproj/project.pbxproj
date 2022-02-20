@@ -24,6 +24,8 @@
 		B8BFE01D27BED8F200B82FC8 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BFE01C27BED8F200B82FC8 /* ScrumTimer.swift */; };
 		B8BFE01F27BEDE1E00B82FC8 /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BFE01E27BEDE1E00B82FC8 /* MeetingFooterView.swift */; };
 		B8D1114A27C01E6300DD0AC1 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D1114927C01E6300DD0AC1 /* ScrumStore.swift */; };
+		B8D6EC3727C2C449007EBF15 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6EC3627C2C449007EBF15 /* ErrorWrapper.swift */; };
+		B8D6EC3927C2C526007EBF15 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6EC3827C2C526007EBF15 /* ErrorView.swift */; };
 		B8F55E3A2791906200ACE542 /* ScrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55E392791906200ACE542 /* ScrumdingerApp.swift */; };
 		B8F55E3C2791906200ACE542 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55E3B2791906200ACE542 /* MeetingView.swift */; };
 		B8F55E3E2791906400ACE542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F55E3D2791906400ACE542 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		B8BFE01C27BED8F200B82FC8 /* ScrumTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
 		B8BFE01E27BEDE1E00B82FC8 /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
 		B8D1114927C01E6300DD0AC1 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
+		B8D6EC3627C2C449007EBF15 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		B8D6EC3827C2C526007EBF15 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B8F55E362791906200ACE542 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F55E392791906200ACE542 /* ScrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerApp.swift; sourceTree = "<group>"; };
 		B8F55E3B2791906200ACE542 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				B85819DB27B2A11300CFBB46 /* DetailEditView.swift */,
 				B85819DF27B2F93400CFBB46 /* ThemePicker.swift */,
 				B85819DD27B2F50100CFBB46 /* ThemeView.swift */,
+				B8D6EC3827C2C526007EBF15 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 				B87FA30D279606A200C125AC /* DailyScrum.swift */,
 				B85C0FD127BFB4BD00F5C227 /* History.swift */,
 				B8D1114927C01E6300DD0AC1 /* ScrumStore.swift */,
+				B8D6EC3627C2C449007EBF15 /* ErrorWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,10 +245,12 @@
 				B8BFE01F27BEDE1E00B82FC8 /* MeetingFooterView.swift in Sources */,
 				B85819DC27B2A11300CFBB46 /* DetailEditView.swift in Sources */,
 				B870505F27961024009A52B9 /* TrailingIconLabelStyle.swift in Sources */,
+				B8D6EC3727C2C449007EBF15 /* ErrorWrapper.swift in Sources */,
 				B87FA30C2796034700C125AC /* Theme.swift in Sources */,
 				B87050612796171C009A52B9 /* ScrumsView.swift in Sources */,
 				B8BFE01D27BED8F200B82FC8 /* ScrumTimer.swift in Sources */,
 				B8BFE01B27BED8E700B82FC8 /* AVPlayer+Ding.swift in Sources */,
+				B8D6EC3927C2C526007EBF15 /* ErrorView.swift in Sources */,
 				B8F55E3C2791906200ACE542 /* MeetingView.swift in Sources */,
 				B8F55E3A2791906200ACE542 /* ScrumdingerApp.swift in Sources */,
 				B85819DE27B2F50100CFBB46 /* ThemeView.swift in Sources */,
@@ -385,7 +393,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,7 +423,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
